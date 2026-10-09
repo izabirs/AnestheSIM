@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use AnestheSIM, please cite it using these metadata."
+title: "AnestheSIM: an open, extensible patient simulator for closed-loop anesthesia driven by VitalDB records"
+type: software
+authors:
+  - given-names: Isabela
+    family-names: Birs
+    email: isabela.birs@aut.utcluj.ro
+version: 1.0.0
+date-released: 2026-10-13
+license: MIT
+repository-code: "https://github.com/izabirs/AnestheSIM"
+abstract: >-
+  AnestheSIM is an open MATLAB/Simulink patient simulator for closed-loop
+  anesthesia research and teaching, in which acquisition from the VitalDB open
+  surgical database is a native, extensible layer. Recorded or designed pump
+  rates and end-tidal gas concentrations drive covariate pharmacokinetic
+  models of propofol, remifentanil and norepinephrine, three interchangeable
+  BIS interaction models, an intravenous-inhalational model for sevoflurane
+  and desflurane, and MAP/HR models, all with published parameters. The
+  release includes cohort search, automatic inhaled-agent resolution, alarms,
+  synthetic patients, unit tests and the scripts that validate the simulator
+  on VitalDB records.
+keywords:
+  - anesthesia
+  - patient simulator
+  - closed-loop control
+  - pharmacokinetics
+  - pharmacodynamics
+  - VitalDB
+  - MATLAB
+  - Simulink
+  - education

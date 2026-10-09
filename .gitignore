@@ -1,0 +1,21 @@
+# Downloaded clinical records and generated output
+cache/
+results/
+
+# MATLAB / Simulink build artifacts
+slprj/
+sccprj/
+codegen/
+*.slxc
+*.autosave
+*.asv
+*.m~
+*.mex*
+*.mlappinstall
+*.mltbx
+helpsearch*/
+octave-workspace
+
+# OS
+.DS_Store
+Thumbs.db
