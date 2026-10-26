@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AnestheSIM – open patient simulator for closed-loop anesthesia (MATLAB/Simulink, VitalDB)</title>
+<meta name="description" content="AnestheSIM is an open, extensible MATLAB/Simulink patient simulator for closed-loop anesthesia research and teaching, driven by VitalDB records. PK/PD models of propofol, remifentanil, norepinephrine, sevoflurane and desflurane; BIS, MAP and HR.">
+<meta name="keywords" content="AnestheSIM, anesthesia simulator, patient simulator, closed-loop anesthesia, VitalDB, pharmacokinetics, pharmacodynamics, BIS, propofol, remifentanil, MATLAB, Simulink">
+<meta name="author" content="Isabela Birs">
+<link rel="canonical" href="https://izabirs.github.io/AnestheSIM/">
+<!-- Google Search Console: paste the verification tag here, e.g.
+<meta name="google-site-verification" content="...">
+-->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AnestheSIM – open patient simulator for closed-loop anesthesia">
+<meta property="og:description" content="Open MATLAB/Simulink patient simulator for closed-loop anesthesia research and teaching, driven by VitalDB records.">
+<meta property="og:url" content="https://izabirs.github.io/AnestheSIM/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "AnestheSIM",
+  "alternateName": ["Anesthesim", "AnestheSIM simulator"],
+  "description": "An open, extensible patient simulator for closed-loop anesthesia research and teaching, driven by VitalDB records (MATLAB/Simulink).",
+  "url": "https://izabirs.github.io/AnestheSIM/",
+  "codeRepository": "https://github.com/izabirs/AnestheSIM",
+  "identifier": "https://doi.org/10.5281/zenodo.23338918",
+  "sameAs": ["https://doi.org/10.5281/zenodo.23338918", "https://github.com/izabirs/AnestheSIM"],
+  "programmingLanguage": "MATLAB",
+  "runtimePlatform": "MATLAB/Simulink",
+  "license": "https://opensource.org/licenses/MIT",
+  "version": "1.0.0",
+  "datePublished": "2026-10-13",
+  "keywords": "anesthesia, patient simulator, closed-loop control, pharmacokinetics, pharmacodynamics, inhaled anesthetics, VitalDB, MATLAB, Simulink, education",
+  "author": {"@type": "Person", "name": "Isabela Birs"}
+}
+</script>
+<style>
+:root {
+  --bg: #fbfbfa; --fg: #1d1f21; --muted: #5b6168; --line: #e3e4e2;
+  --card: #ffffff; --accent: #0b6e72; --accent-fg: #ffffff; --code: #f1f2f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141617; --fg: #e8e9e7; --muted: #9ea4a9; --line: #2a2d2f;
+    --card: #1b1e1f; --accent: #4fb8bc; --accent-fg: #0b1516; --code: #222628;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141617; --fg: #e8e9e7; --muted: #9ea4a9; --line: #2a2d2f;
+  --card: #1b1e1f; --accent: #4fb8bc; --accent-fg: #0b1516; --code: #222628;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 56px 16px 72px; }
+h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+h2 { font-size: 1.25rem; margin: 44px 0 10px; }
+p.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 28px; }
+a { color: var(--accent); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; border: 1px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--accent-fg); }
+.btn.secondary { color: var(--accent); }
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+pre { background: var(--code); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow-x: auto; }
+blockquote {
+  margin: 0; padding: 14px 18px; background: var(--card); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent); border-radius: 8px;
+}
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AnestheSIM</h1>
+  <p class="lede">An open, extensible patient simulator for closed-loop anesthesia research and teaching, driven by VitalDB records (MATLAB/Simulink).</p>
+
+  <div class="actions">
+    <a class="btn primary" href="https://github.com/izabirs/AnestheSIM">Source code on GitHub</a>
+    <a class="btn secondary" href="https://doi.org/10.5281/zenodo.23338918">Zenodo DOI 10.5281/zenodo.23338918</a>
+  </div>
+
+  <h2>What AnestheSIM does</h2>
+  <p>AnestheSIM lets real intraoperative records from the <a href="https://vitaldb.net">VitalDB</a> open dataset, or designed dosing schedules, drive interchangeable pharmacokinetic/pharmacodynamic (PK/PD) models, and compares the simulated BIS, MAP and HR with what was measured. It is built for developing and benchmarking automated drug-delivery and depth-of-anesthesia control algorithms, and for teaching.</p>
+  <ul>
+    <li><strong>Drugs:</strong> propofol, remifentanil and norepinephrine in pump units (mL/h); sevoflurane and desflurane as end-tidal vol%, with automatic agent resolution.</li>
+    <li><strong>PK:</strong> Schnider (propofol), Minto (remifentanil), Joachim covariate model (norepinephrine), first-order volatile effect sites with Mapleson age adjustment.</li>
+    <li><strong>PD:</strong> additive Minto, Bouillon and reduced Greco BIS surfaces in parallel, an intravenous–inhalational interaction model, and MAP/HR models.</li>
+    <li><strong>Validation on real data:</strong> replays a VitalDB cohort and reports Varvel performance metrics for BIS, MAP and HR.</li>
+    <li><strong>Database abstraction:</strong> the same simulation core runs on VitalDB, on synthetic patients, or on any other database once its loader exists.</li>
+    <li><strong>Fast:</strong> a 3-hour case simulates in under a second on a laptop.</li>
+  </ul>
+
+  <h2>Quick start</h2>
+  <p>Requires MATLAB and Simulink (tested with R2025b).</p>
+<pre><code>setup_anesthesim      % paths; regenerates the Simulink model if needed
+main                  % simulate VitalDB case 2809 end to end
+run_tests             % unit tests, no internet needed</code></pre>
+
+  <h2>Cite AnestheSIM</h2>
+  <blockquote>Birs, I. (2026). <em>AnestheSIM: an open, extensible patient simulator for closed-loop anesthesia driven by VitalDB records</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.23338918">https://doi.org/10.5281/zenodo.23338918</a></blockquote>
+
+  <footer>
+    AnestheSIM · MIT License · © 2026 Isabela Birs ·
+    <a href="https://github.com/izabirs/AnestheSIM">GitHub</a> ·
+    <a href="https://doi.org/10.5281/zenodo.23338918">Zenodo</a>
+  </footer>
+</main>
+</body>
+</html>

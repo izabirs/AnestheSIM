@@ -1,5 +1,7 @@
 # AnestheSIM
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23338918.svg)](https://doi.org/10.5281/zenodo.23338918)
+
 **An open, extensible patient simulator for closed-loop anesthesia research and teaching, driven by VitalDB records (MATLAB/Simulink).**
 
 AnestheSIM lets real intraoperative records, or designed dosing schedules, drive interchangeable
@@ -149,8 +151,13 @@ surgical patients*, Scientific Data 9, 279 (2022).
 
 ## Citation
 
-If you use AnestheSIM, please cite the software. The DOI of each release is listed on Zenodo and
-in [`CITATION.cff`](CITATION.cff).
+If you use AnestheSIM, please cite the software:
+
+> Birs, I. (2026). *AnestheSIM: an open, extensible patient simulator for closed-loop anesthesia
+> driven by VitalDB records*. Zenodo. https://doi.org/10.5281/zenodo.23338918
+
+This DOI always resolves to the latest release. The DOI of each release is listed on
+[Zenodo](https://doi.org/10.5281/zenodo.23338918), and the metadata are in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
